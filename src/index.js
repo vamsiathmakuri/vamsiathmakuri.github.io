@@ -1,21 +1,37 @@
 import 'fullpage.js/dist/fullpage.css'
 import 'flickity/css/flickity.css'
 import './styles.scss'
+import 'fullpage.js/vendors/scrolloverflow'
 import fullpage from 'fullpage.js'
 import anime from 'animejs/lib/anime.es.js'
 import 'particles.js'
 import Flickity from 'flickity'
 import $ from 'cash-dom'
 
+let pageInstance
+
 function fullPageInit () {
-  fullpage('#myFullpage', {
-    navigation: true,
+  pageInstance = fullpage('#myFullpage', {
+    navigation: false,
     licenseKey: 'asds',
     sectionsColor: ['#212121', '#212121', '#212121', '#212121'],
     lazyLoading: true,
-    normalScrollElements: '.scrollable-content'
+    normalScrollElements: '.scrollable-content',
+    scrollOverflow: true,
+    scrollingSpeed: 900,
+    onLeave: function (origin, destination, direction) {
+      if (origin.index === 0) {
+        pageInstance.setAllowScrolling(false)
+      } else {
+        pageInstance.setAllowScrolling(true)
+      }
+    }
   })
-  textAnimationInit()
+
+  setTimeout(() => {
+    $('.loading-section').remove()
+    textAnimationInit()
+  }, 1000)
 
   $('.info-card .more-info').on('click', function () {
     $(this).parent().find('.description').addClass('active')
@@ -87,9 +103,19 @@ function init () {
   particlesJS.load('particles-js', 'assets/particles.json', function () {
     console.log('callback - particles.js config loaded')
   })
-  const flky = new Flickity('.main-projects', {
+
+  const data = new Flickity('.main-projects', {
     cellAlign: 'left',
-    contain: false
+    contain: true
+  })
+
+  $('body').on('click', '.main-content .scroll-section', () => {
+    pageInstance.setAllowScrolling(true)
+    pageInstance.moveSectionUp()
+  })
+
+  $('body').on('click', '.main-row .scroll-section', () => {
+    pageInstance.moveSectionDown()
   })
 }
 
