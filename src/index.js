@@ -1,33 +1,12 @@
-import 'fullpage.js/dist/fullpage.css'
 import 'flickity/css/flickity.css'
 import './styles.scss'
-import 'fullpage.js/vendors/scrolloverflow'
-import fullpage from 'fullpage.js'
 import anime from 'animejs/lib/anime.es.js'
 import 'particles.js'
 import Flickity from 'flickity'
 import $ from 'cash-dom'
 
-let pageInstance
 
 function fullPageInit () {
-  pageInstance = fullpage('#myFullpage', {
-    navigation: false,
-    licenseKey: 'asds',
-    sectionsColor: ['#212121', '#212121', '#212121', '#212121'],
-    lazyLoading: true,
-    normalScrollElements: '.scrollable-content',
-    scrollOverflow: true,
-    scrollingSpeed: 900,
-    onLeave: function (origin, destination, direction) {
-      if (origin.index === 0) {
-        pageInstance.setAllowScrolling(false)
-      } else {
-        pageInstance.setAllowScrolling(true)
-      }
-    }
-  })
-
   setTimeout(() => {
     $('.loading-section').remove()
     textAnimationInit()
@@ -40,6 +19,13 @@ function fullPageInit () {
   $('.description .close').on('click', function () {
     $(this).closest('.description').removeClass('active')
   })
+
+  $('body').on('click', '.main-row .scroll-section', () => {
+    window.scrollTo({
+      top: document.getElementById('main-home').clientHeight,
+      behavior: 'smooth'
+    });
+  });
 }
 
 function textAnimationInit () {
@@ -109,14 +95,13 @@ function init () {
     contain: true
   })
 
-  $('body').on('click', '.main-content .scroll-section', () => {
-    pageInstance.setAllowScrolling(true)
-    pageInstance.moveSectionUp()
-  })
-
-  $('body').on('click', '.main-row .scroll-section', () => {
-    pageInstance.moveSectionDown()
-  })
+  document.getElementById('main-home').style.height = `${window.innerHeight}px`;
+  
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0
+    })
+  }, 10)
 }
 
 window.onload = init

@@ -22,7 +22,6 @@
     "animejs": "^3.2.1",
     "cash-dom": "^8.1.0",
     "flickity": "^2.2.1",
-    "fullpage.js": "^3.0.9",
     "particles.js": "^2.0.0"
   },
   "devDependencies": {
