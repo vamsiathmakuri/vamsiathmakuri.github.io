@@ -14,10 +14,12 @@ function fullPageInit () {
 
   $('.info-card .more-info').on('click', function () {
     $(this).parent().find('.description').addClass('active')
+    $('body').addClass('no-overflow')
   })
 
   $('.description .close').on('click', function () {
     $(this).closest('.description').removeClass('active')
+    $('body').removeClass('no-overflow');
   })
 
   $('body').on('click', '.main-row .scroll-section', () => {
