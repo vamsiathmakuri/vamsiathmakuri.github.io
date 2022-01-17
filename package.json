@@ -1,27 +1,26 @@
 {
   "name": "my-portfolio",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Portfolio Website - Vamsi Krishna Athmakuri",
   "private": true,
   "scripts": {
     "build:dev": "webpack",
     "build": "webpack --mode production",
-    "start": "webpack serve --host 0.0.0.0 --port 3000"
+    "start": "webpack serve --host 0.0.0.0 --port 3100"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vamsiathmakuri/my-portfolio.git"
+    "url": "git+https://github.com/vamsiathmakuri/vamsiathmakuri.github.io.git"
   },
   "author": "Vamsi Athmakuri",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vamsiathmakuri/my-portfolio/issues"
+    "url": "https://github.com/vamsiathmakuri/vamsiathmakuri.github.io/issues"
   },
-  "homepage": "https://github.com/vamsiathmakuri/my-portfolio#readme",
+  "homepage": "https://github.com/vamsiathmakuri/vamsiathmakuri.github.io#readme",
   "dependencies": {
     "animejs": "^3.2.1",
     "cash-dom": "^8.1.0",
-    "flickity": "^2.2.1",
     "particles.js": "^2.0.0"
   },
   "devDependencies": {

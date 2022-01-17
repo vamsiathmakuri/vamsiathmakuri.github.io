@@ -10,7 +10,7 @@ function fullPageInit () {
   setTimeout(() => {
     $('.loading-section').remove()
     textAnimationInit()
-  }, 1000)
+  }, 250)
 
   $('.info-card .more-info').on('click', function () {
     $(this).parent().find('.description').addClass('active')
@@ -90,11 +90,6 @@ function init () {
   fullPageInit()
   particlesJS.load('particles-js', 'assets/particles.json', function () {
     console.log('callback - particles.js config loaded')
-  })
-
-  const data = new Flickity('.main-projects', {
-    cellAlign: 'left',
-    contain: true
   })
 
   document.getElementById('main-home').style.height = `${window.innerHeight}px`;

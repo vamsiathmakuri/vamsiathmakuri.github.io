@@ -162,8 +162,9 @@
         background: rgba(0, 0, 0, 0.24);
         border-radius: 5px;
         margin: 10px;
-        box-shadow: 0 3px 12px 0 rgba(2,3,5,.07);
         width: 25%;
+
+        box-shadow: 0px 0px 10px 1px #000000a8;
 
         span {
             display: block;
@@ -279,18 +280,19 @@
 
 .skill-card .skill-sections {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto;
     justify-items: center;
     > div {
-        width: 90%;
+        width: 85%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         background: rgba(0, 0, 0, 0.24);
         color: white;
-        margin: 8px;
+        margin: 16px 8px;
         border-radius: 5px;
+        box-shadow: 0px 0px 10px 1px #000000a8;
         h3 {
             display: flex;
             justify-content: space-evenly;
@@ -304,27 +306,12 @@
             }
         }
 
+        transition: transform ease 0.2s;
         &:hover {
             cursor: pointer;
             transform: scale(1.1);
         }
     }
-}
-
-/* no circle */
-.flickity-button {
-    background: transparent;
-}
-.flickity-button:hover {
-    background: black;
-}
-/* icon color */
-.flickity-button-icon {
-    fill: white;
-}
-/* hide disabled button */
-.flickity-button:disabled {
-    display: none;
 }
 
 @media screen and (max-width: 800px) {
@@ -449,17 +436,26 @@
     }
 }
 
+h2.header {
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
 .contact-me {
     background: rgba(0, 0, 0, 0.178);
     padding: 20px 30px;
     border-radius: 5px;
     align-items: center;
     display: flex;
-    margin-top: 60px;
+    margin: 0 10px;
+    margin-top: 30px;
+    box-shadow: 0px 0px 10px 1px #000000a8;
 
-    h2 {
-        font-size: 20px;
+    .stats {
+        padding: 10px;
     }
+
     .myself {
         flex-grow: 1;
         display: flex;
