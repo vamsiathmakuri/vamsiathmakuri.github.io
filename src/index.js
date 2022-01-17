@@ -2,7 +2,6 @@ import 'flickity/css/flickity.css'
 import './styles.scss'
 import anime from 'animejs/lib/anime.es.js'
 import 'particles.js'
-import Flickity from 'flickity'
 import $ from 'cash-dom'
 
 
