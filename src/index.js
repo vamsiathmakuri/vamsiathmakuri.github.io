@@ -1,4 +1,3 @@
-import 'flickity/css/flickity.css'
 import './styles.scss'
 import anime from 'animejs/lib/anime.es.js'
 import 'particles.js'
