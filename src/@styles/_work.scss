@@ -90,7 +90,7 @@
 
                 .content {
                     font-size: 14px;
-                    text-align: justify;
+                    // text-align: justify;
                     padding: 20px 30px;
 
                     .project {
@@ -130,6 +130,8 @@
                     }
 
                     @media screen and (max-width: 800px) {
+
+                        padding: 10px 10px;
                         font-size: 12px;
 
                         .tags {

@@ -20,7 +20,7 @@ function fullPageInit () {
     $('body').removeClass('no-overflow');
   })
 
-  $('body').on('click', '.main-row .scroll-section', () => {
+  $('body').on('click', '.main-row .on-scroll', () => {
     window.scrollTo({
       top: document.getElementById('main-home').clientHeight,
       behavior: 'smooth'
