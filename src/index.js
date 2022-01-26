@@ -91,6 +91,9 @@ function init () {
   })
 
   document.getElementById('main-home').style.height = `${window.innerHeight}px`;
+
+  const age = Math.floor((new Date() - new Date('1996-11-09').getTime()) / 3.15576e+10);
+  document.getElementById('year-text').innerText = age;
   
   setTimeout(() => {
     window.scrollTo({

@@ -1,0 +1,15 @@
+
+.about-me {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    
+    p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .about-me {
+        font-size: 0.9rem;
+    }
+}
