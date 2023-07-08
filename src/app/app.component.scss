@@ -1,0 +1,133 @@
+.project-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1E2D3D;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.space-between {
+    flex: 1
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #1E2D3D;
+    color: #607B96;
+    font-size: 14px;
+
+    .username {
+        padding: 10px 0;
+        width: 20%;
+        text-align: center;
+
+        >span {
+            cursor: pointer;
+        }
+
+        &:hover {
+            color: #FFFFFF;
+        }
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: row;
+
+        .action {
+            color: #607B96;
+            border-right: 1px solid #1E2D3D;
+            text-decoration: none;
+            padding: 10px 20px;
+
+            cursor: pointer;
+
+            &.active {
+                border-bottom: 2px solid #FEA55F;
+                color: #FFFFFF;
+            }
+
+            &:hover {
+                color: #FFFFFF;
+            }
+
+            &:first-child {
+                border-left: 1px solid #1E2D3D;
+            }
+        }
+    }
+
+    .contact-me {
+        color: #607B96;
+        text-decoration: none;
+        border-left: 1px solid #1E2D3D;
+        padding: 10px 20px;
+
+        cursor: pointer;
+
+        &.active {
+            border-bottom: 2px solid #FEA55F;
+            color: #FFFFFF;
+        }
+
+        &:hover {
+            color: #FFFFFF;
+        }
+    }
+}
+
+.content {
+    flex: 1
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 1px solid #1E2D3D;
+    color: #607B96;
+    font-size: 14px;
+
+    .head {
+        padding: 10px 20px;
+    }
+
+    .icons {
+        display: flex;
+
+        >a {
+            svg {
+                padding: 0 3px 2px 3px;
+            }
+
+            display: flex;
+            align-items: center;
+            color: #607B96;
+            border-right: 1px solid #1E2D3D;
+            text-decoration: none;
+            padding: 10px;
+
+            cursor: pointer;
+
+            &:first-child {
+                border-left: 1px solid #1E2D3D;
+            }
+
+            &:hover {
+                color: #FFFFFF;
+
+                svg {
+                    path {
+                        fill: #FFFFFF;
+                    }
+
+                    g {
+                        fill: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}

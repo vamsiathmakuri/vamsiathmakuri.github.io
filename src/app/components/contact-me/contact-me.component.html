@@ -1,0 +1,98 @@
+<div class="contact-me-container">
+    <div class="left-panel">
+        <div class="section">
+            <div class="section-head">
+                <span>contacts</span>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <span title="athmakurivamshi@gmail.com">athmakurivamshi@gmail.com</span>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-head">
+                <span>find-me-also-in</span>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <span>discord</span>
+                </div>
+                <div class="item">
+                    <span>instagram</span>
+                </div>
+                <div class="item">
+                    <span>youtube-channel</span>
+                </div>
+                <div class="item">
+                    <span>threads</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-container">
+        <div class="form-container">
+            <div class="form">
+                <div class="field">
+                    <label>_name :</label>
+                    <input type="text" [(ngModel)]="name"/>
+                </div>
+                <div class="field">
+                    <label>_email :</label>
+                    <input type="text" [(ngModel)]="email"/>
+                </div>
+                <div class="field">
+                    <label>_message :</label>
+                    <textarea rows="8" [(ngModel)]="message"></textarea>
+                </div>
+                <div class="actions">
+                    <div class="button">
+                        submit-message
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="preview-container">
+            <div class="code">
+                <span>
+                    <span class="keyword">const</span>
+                    <span class="variable"> button </span>
+                    <span class="keyword">=</span>
+                    <span class="variable"> document.querySelector</span>(<span class="string">"#submit-message"</span>);
+                </span>
+                <br>
+                <span>
+                    <span class="keyword">const</span>
+                    <span class="variable"> message </span>
+                    <span class="keyword">=</span>
+                    {{ '{' }}
+                </span>
+                <span>
+                    <span class="variable">&nbsp;&nbsp;&nbsp;&nbsp;name : </span>
+                    <span class="string">"{{name}}"</span>,
+                </span>
+                <span>
+                    <span class="variable">&nbsp;&nbsp;&nbsp;&nbsp;email : </span>
+                    <span class="string">"{{email}}"</span>,
+                </span>
+                <span>
+                    <span class="variable">&nbsp;&nbsp;&nbsp;&nbsp;message : </span>
+                    <span class="string">"{{message}}"</span>,
+                </span>
+                <span>
+                    <span class="variable">&nbsp;&nbsp;&nbsp;&nbsp;date : </span>
+                    <span class="string">"{{ date | date }}"</span>
+                </span>
+                <span>
+                    {{ '};' }}
+                </span>
+                <br>
+                <span>
+                    <span class="variable">button.addEventListener</span>(<span class="string">"click"</span>, ()
+                    <span class="keyword"> => </span>{{ '{' }} <br>
+                    <span class="variable">&nbsp;&nbsp;&nbsp;&nbsp;form.send</span>(<span class="variable">message</span>))<br>{{ '}' }};
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

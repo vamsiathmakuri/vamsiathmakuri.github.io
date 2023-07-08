@@ -1,47 +1,18 @@
-@import './@styles/loader';
-@import './@styles/portfolio';
-@import './@styles/work';
-@import './@styles/landing';
-@import './@styles/contact';
-@import './@styles/about';
-@import './@styles/skills';
+html {
+    background: #010C15;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    height: calc(100vh - 20px);
+}
 
 * {
-    -webkit-tap-highlight-color: transparent;
+    font-family: Fira Code;
 }
 
-.no-overflow {
-    overflow: hidden;
+textarea {
+    resize: none;
 }
-
-.flex {
-    display: flex;
-}
-
-.main-content {
-    padding: 3% 5%;
-
-    >div {
-        margin-bottom: 35px;
-    }
-
-    @media screen and (max-width: 800px) {
-        padding: 5% 3%;
-    }
-}
-
-.section {
-    .header {
-        font-size: 20px;
-        text-align: center;
-    }
-}
-
-#particles-js {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 0;
-}
+  
