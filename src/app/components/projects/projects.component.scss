@@ -156,7 +156,7 @@
                     background: #FEA55F;
                     padding: 5px 10px;
                     margin-right: 10px;
-                    border-radius: 8px;
+                    border-radius: 4px;
                     color: #000000;
                     user-select: none;
                 }
@@ -201,4 +201,8 @@
     &::before {
         content: '// ';
     }
+}
+
+.no-projects {
+    padding: 10px;
 }

@@ -47,7 +47,7 @@
     </div>
     <div class="content-container">
         <div class="form-container">
-            <div class="form">
+            <div class="form" *ngIf="!submission">
                 <div class="field">
                     <label>_name :</label>
                     <input type="text" [(ngModel)]="name" />
@@ -61,8 +61,17 @@
                     <textarea rows="8" [(ngModel)]="message"></textarea>
                 </div>
                 <div class="actions">
-                    <div class="button">
+                    <div class="button" (click)="submitResponse()">
                         submit-message
+                    </div>
+                </div>
+            </div>
+            <div class="completed-form" *ngIf="submission">
+                <h4>Thank you! 🤘</h4>
+                <p>Your message has been accepted. You will recieve answer really soon!</p>
+                <div class="actions">
+                    <div class="button" (click)="clear();">
+                        send-new-message
                     </div>
                 </div>
             </div>

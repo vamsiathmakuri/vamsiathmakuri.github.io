@@ -30,9 +30,9 @@
                     <div class="tags">
                         <span class="tag" *ngFor="let tag of item.tags">{{tag}}</span>
                     </div>
-                    <div class="description">
+                    <p class="description">
                         {{ item.description }}
-                    </div>
+                    </p>
                     <div class="links">
                         <ng-container *ngIf="item.link">
                             <a [href]="item.link" target="_blank">view-project</a>
@@ -41,6 +41,12 @@
                             <a [href]="item.code" target="_blank">github-repo</a>
                         </ng-container>
                     </div>
+                </div>
+            </div>
+
+            <div *ngIf="!projects.length">
+                <div class="no-projects">
+                    <span>// no-projects</span>
                 </div>
             </div>
         </div>

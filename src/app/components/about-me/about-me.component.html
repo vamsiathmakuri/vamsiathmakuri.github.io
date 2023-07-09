@@ -1,8 +1,245 @@
 <div class="about-container">
     <div class="left-panel">
-
+        <div class="section-list">
+            <div class="section-head">
+                <span>about-me</span>
+            </div>
+            <div class="items">
+                <div class="item" [class.active]="active == 'bio'" (click)="goTo('bio')">bio</div>
+                <div class="item" [class.active]="active == 'professional-experience'"
+                    (click)="goTo('professional-experience')">experience</div>
+                <div class="item" [class.active]="active == 'experience-products'"
+                    (click)="goTo('experience-products')">work</div>
+            </div>
+        </div>
     </div>
-    <div class="content-container">
-        
+    <div class="content-container" #scrollview>
+        <div class="section" id="bio">
+            <h3>Bio: </h3>
+            <span>
+                <p>
+                    I am Athmakuri Vamsi Krishna, a 26-year-old Full Stack Developer from Hyderabad 🏠. My focus lies in
+                    exploring JavaScript and its frameworks while staying up-to-date with web development standards 💻.
+                    Contributing to open source projects is my passion, as it allows me to grow as a developer 👩🏽‍💻.
+                    During my free time, I enjoy listening to music 🎶, gaming 🎮, understanding open source project
+                    internals 🧐, taking random photos 📷, and traveling 🧳.
+                </p>
+            </span>
+            <div>
+                <h5>Skills: </h5>
+                <div class="tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">NodeJS</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">ExpressJS</span>
+                    <span class="tag">Angular</span>
+                    <span class="tag">WebPack</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">MS SQL Server</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Electron</span>
+                    <span class="tag">AWS Lambda</span>
+                    <span class="tag">Mocha</span>
+                    <span class="tag">React Native</span>
+                    <span class="tag">.NET Core</span>
+                </div>
+            </div>
+            <div>
+                <h5>Resume:</h5>
+                <a href="https://drive.google.com/file/d/1h8lKOsqHVVFAN9UrzRAzQ-kYgpPB1dtp/view?usp=sharing" target="_blank" class="file">file.pdf</a>
+            </div>
+            <div>
+                <h5>Education:</h5>
+                <p>
+                    - Graduated with a Bachelor's degree in Computer Science and Engineering from Gitam University in
+                    2018, achieving an CGPA of 8.28
+                </p>
+                <p>
+                    - Completed a comprehensive System and Application Development training program at MissionRnD in
+                    August 2017.
+                </p>
+            </div>
+        </div>
+        <div class="section" id="professional-experience">
+            <h3>Professional Experience:</h3>
+            <div class="timeline">
+                <div class="step">
+                    <div class="time-card">
+                        <div class="work-card">
+                            <h4>Product Development Lead</h4>
+                            <div class="caption">
+                                <span class="company">Inncircles, Hyderabad</span>
+                                <span class="duration">April 2021 - Present</span>
+                            </div>
+                            <div class="products">
+                                <span class="head">Products: </span>
+                                <span class="product" (click)="goTo('inncircles-builders')">Inncircles Builders</span>
+                                <span class="product" (click)="goTo('techlearn')">Techlearn</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="time-card">
+                        <div class="work-card">
+                            <h4>Full Stack Developer</h4>
+                            <div class="caption">
+                                <span class="company">GrabOn, Hyderabad</span>
+                                <span class="duration">August 2018 - October 2020</span>
+                            </div>
+                            <div class="products">
+                                <span class="head">Products: </span>
+                                <span class="product" (click)="goTo('rank-drive')">RankDrive</span>
+                                <span class="product" (click)="goTo('grabon')">GrabOn</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="time-card">
+                        <div class="work-card">
+                            <h4>Full Stack Intern</h4>
+                            <div class="caption">
+                                <span class="company">GrabOn, Hyderabad</span>
+                                <span class="duration">December 2017 - July 2018</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="experience-products">
+            <h4>Products I have worked on:</h4>
+            <div class="project" id="inncircles-builders">
+                <div>
+                    <h6>Inncircles Builders</h6>
+                    <span>
+                        Inncircles Builders is a Construction Management service offers WorkLogging/Analytics &
+                        Billing for Engineers and Contractors
+                    </span>
+                </div>
+                <div class="tags no-animation">
+                    <label class="tag">TypeScript</label>
+                    <label class="tag">NodeJS</label>
+                    <label class="tag">MongoDB</label>
+                    <label class="tag">ExpressJS</label>
+                    <label class="tag">Angular</label>
+                    <label class="tag">React Native</label>
+                </div>
+                <div>
+                    <p>
+                        Successfully led and managed a high-performing team of 10 skilled full-stack developers,
+                        overseeing the entire software development lifecycle, and coordinated two cross-functional teams
+                        to deliver a cutting-edge construction management service.
+                        Revamped the entire application logic from the ground up, leveraging extensive technical
+                        expertise to optimize performance and implement logic improvements.
+                        Designed, developed, and successfully implemented a sophisticated work order billing system
+                        for seamless collaboration between a construction company and contractors.
+                        Successfully implemented a highly intricate and robust permissions management framework to
+                        enforce granular permissions, role-based access, and fine-grained user privileges.
+                        Provided leadership in the successful implementation of a customized UI frameworks for
+                        Angular and React Native.
+                        Enhanced the existing application architecture by leveraging Amazon Web Services (AWS) to
+                        optimize compute resources.
+                    </p>
+                </div>
+            </div>
+            <div class="project" id="techlearn">
+                <div>
+                    <h6>Techlearn</h6>
+                    <span>
+                        Techlearn is a EdTech Product which offers live training sessions and curated course
+                        content
+                    </span>
+                </div>
+                <div class="tags no-animation">
+                    <label class="tag">TypeScript</label>
+                    <label class="tag">NodeJS</label>
+                    <label class="tag">MongoDB</label>
+                    <label class="tag">ExpressJS</label>
+                    <label class="tag">Angular</label>
+                    <label class="tag">React Native</label>
+                </div>
+                <div>
+                    <p>
+                        Spearheaded a team of 8+ back-end & front-end developers.
+                        Implemented a complex Schedule Management system for Live Sessions, tightly integrated with
+                        Zoom API.
+                        Played a key role in sprint cycle management, conducting thorough code reviews, and
+                        overseeing production deployments to ensure high-quality and timely deliverables.
+                        Developed a Generic Content Plugin that enabled rich text content to be utilized across
+                        various frameworks like Angular, and React Native.
+                        Developed and launched the initial version of a Mobile Application using React Native.
+                        Integrated various AWS Services, including Media Convert and Image CDN, for efficient
+                        content management.
+                    </p>
+                </div>
+            </div>
+            <div class="project" id="rank-drive">
+                <div>
+                    <h6>RankDrive</h6>
+                    <span>
+                        RankDrive is a Digital Marketing Intelligence Platform with complete Suite of SEO Services,
+                        Insights, Rankings, and Analytics
+                    </span>
+                </div>
+                <div class="tags no-animation">
+                    <label class="tag">NodeJS</label>
+                    <label class="tag">MongoDB</label>
+                    <label class="tag">ExpressJS</label>
+                    <label class="tag">Angular</label>
+                    <label class="tag">Python</label>
+                </div>
+                <div>
+                    <p>
+                        Led the design and development of the application architecture for RankDrive, a SaaS product
+                        Implemented a robust Google Search Scraping Service using Scrapoxy on AWS Services,
+                        including EC2, Lambda, SQS, S3, and Athena, enabling data collection and analysis at scale.
+                        Developed a front-end UI framework in Angular based on RankDrive's design principles.
+                        Integrated various third-party APIs, such as Google Analytics, Google Webmasters, Facebook,
+                        and YouTube, for social analytics.
+                        Collaborated closely with the Data Science team to integrate and build an Insights Engine.
+                        Developed grabon-node, a NodeJS API over express.js with a query builder utility tailored
+                        for business logic for MongoDB aggregations.
+                    </p>
+                </div>
+            </div>
+            <div class="project" id="grabon">
+                <div>
+                    <h6>GrabOn</h6>
+                    <span>
+                        GrabOn is a leading Coupons/Deals Marketplace and a pioneer in affiliate e-commerce scene
+                        in India
+                    </span>
+                </div>
+                <div class="tags no-animation">
+                    <label class="tag">NodeJS</label>
+                    <label class="tag">MongoDB</label>
+                    <label class="tag">ExpressJS</label>
+                    <label class="tag">Angular</label>
+                    <label class="tag">MS SQL Server</label>
+                    <label class="tag">C#</label>
+                    <label class="tag">React</label>
+                    <label class="tag">.NET Core</label>
+                </div>
+                <div>
+                    <p>
+                        Development and maintenance of a website utilizing .NET Framework and WebPack, ensuring
+                        smooth and secure website operations.
+                        Implemented payment gateway integrations for GiftCards, including integration with Paytm.
+                        Developed and implemented ETL process to aggregate Sales Data from diverse affiliate
+                        platforms.
+                        Provided analytics/reconciliation dashboards for internal teams and clients, enabling
+                        data-driven decision making.
+                        Collaborated with cross-functional teams throughout the entire application development
+                        lifecycle, from design to deployment, ensuring seamless coordination and successful project
+                        outcomes.
+                        Implemented an IIS Server Log Monitoring Solution using AWS S3 and Athena.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
