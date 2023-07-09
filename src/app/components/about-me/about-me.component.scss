@@ -1,0 +1,22 @@
+.about-container {
+    height: 100%;
+    display: flex;
+
+    color: #607B96;
+    font-size: 14px;
+}
+
+.left-panel {
+    width: 20%;
+    border-right: 1px solid #1E2D3D;
+}
+
+.content-container {
+    width: 80%;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

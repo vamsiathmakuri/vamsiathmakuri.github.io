@@ -6,7 +6,10 @@
             </div>
             <div class="items">
                 <div class="item">
-                    <span title="athmakurivamshi@gmail.com">athmakurivamshi@gmail.com</span>
+                    <a href="mailto:athmakurivamshi@gmail.com" title="athmakurivamshi@gmail.com">
+                        <span class="material-symbols-outlined">mail</span>
+                        athmakurivamshi@gmail.com
+                    </a>
                 </div>
             </div>
         </div>
@@ -16,16 +19,28 @@
             </div>
             <div class="items">
                 <div class="item">
-                    <span>discord</span>
+                    <a href="https://discordapp.com/users/deadmagneto" target="_blank">
+                        <span class="material-symbols-outlined">link</span>
+                        discord (deadmagneto)
+                    </a>
                 </div>
                 <div class="item">
-                    <span>instagram</span>
+                    <a href="https://www.instagram.com/vamsiathmakuri/" target="_blank">
+                        <span class="material-symbols-outlined">link</span>
+                        instagram
+                    </a>
                 </div>
                 <div class="item">
-                    <span>youtube-channel</span>
+                    <a href="https://youtube.com/@VamsiAthmakuri" target="_blank">
+                        <span class="material-symbols-outlined">link</span>
+                        youtube-channel
+                    </a>
                 </div>
                 <div class="item">
-                    <span>threads</span>
+                    <a href="https://www.threads.net/@vamsiathmakuri" target="_blank">
+                        <span class="material-symbols-outlined">link</span>
+                        threads
+                    </a>
                 </div>
             </div>
         </div>
@@ -35,11 +50,11 @@
             <div class="form">
                 <div class="field">
                     <label>_name :</label>
-                    <input type="text" [(ngModel)]="name"/>
+                    <input type="text" [(ngModel)]="name" />
                 </div>
                 <div class="field">
                     <label>_email :</label>
-                    <input type="text" [(ngModel)]="email"/>
+                    <input type="text" [(ngModel)]="email" />
                 </div>
                 <div class="field">
                     <label>_message :</label>
@@ -58,7 +73,8 @@
                     <span class="keyword">const</span>
                     <span class="variable"> button </span>
                     <span class="keyword">=</span>
-                    <span class="variable"> document.querySelector</span>(<span class="string">"#submit-message"</span>);
+                    <span class="variable"> document.querySelector</span>(<span
+                        class="string">"#submit-message"</span>);
                 </span>
                 <br>
                 <span>
@@ -90,7 +106,8 @@
                 <span>
                     <span class="variable">button.addEventListener</span>(<span class="string">"click"</span>, ()
                     <span class="keyword"> => </span>{{ '{' }} <br>
-                    <span class="variable">&nbsp;&nbsp;&nbsp;&nbsp;form.send</span>(<span class="variable">message</span>))<br>{{ '}' }};
+                    <span class="variable">&nbsp;&nbsp;&nbsp;&nbsp;form.send</span>(<span
+                        class="variable">message</span>))<br>{{ '}' }};
                 </span>
             </div>
         </div>

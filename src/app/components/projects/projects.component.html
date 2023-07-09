@@ -1,0 +1,48 @@
+<div class="projects-container">
+    <div class="left-panel">
+        <div class="section">
+            <div class="section-head">
+                <span>projects</span>
+            </div>
+            <div class="items">
+                <div *ngFor="let item of categories" class="item" [class.active]="item.selected"
+                    (click)="item.selected = !item.selected; updateFilter();">
+                    <span>
+                        <span class="material-symbols-outlined">{{item.selected ? 'check_box' :
+                            'check_box_outline_blank'}}</span>
+                        {{ item.name }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-container">
+        <div class="project-list">
+            <div class="project" *ngFor="let item of projects; let i = index">
+                <div class="project-name">
+                    <span>Project {{ i + 1 }}</span>
+                    <span class="comment">{{ item.id }}</span>
+                </div>
+                <div class="project-card">
+                    <div class="image" [class.under-development]="item.underDevelopment">
+                        <img [src]="item.image" alt="" />
+                    </div>
+                    <div class="tags">
+                        <span class="tag" *ngFor="let tag of item.tags">{{tag}}</span>
+                    </div>
+                    <div class="description">
+                        {{ item.description }}
+                    </div>
+                    <div class="links">
+                        <ng-container *ngIf="item.link">
+                            <a [href]="item.link" target="_blank">view-project</a>
+                        </ng-container>
+                        <ng-container *ngIf="item.code">
+                            <a [href]="item.code" target="_blank">github-repo</a>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
