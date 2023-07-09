@@ -2,7 +2,9 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
+      - portfolio-v2
 
 jobs:
   build-and-deploy:
