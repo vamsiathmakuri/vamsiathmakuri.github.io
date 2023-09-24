@@ -18,7 +18,7 @@
 }
 
 .content-container {
-    width: 80%;
+    flex: 1;
     overflow: auto;
 }
 
@@ -205,4 +205,19 @@
 
 .no-projects {
     padding: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .left-panel {
+        display: none;
+    }
+
+    .section {
+        margin: 20px 0;
+        padding: 0 20px;
+    }
+
+    .tags {
+        justify-content: space-evenly;
+    }
 }

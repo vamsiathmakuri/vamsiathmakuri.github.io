@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'vamsiathmakuri';
+
+  showMenu = false;
+
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
+
+  itemClicked() {
+    this.showMenu = false;
+  }
 }

@@ -13,7 +13,7 @@
 
 .content-container {
     overflow: auto;
-    width: 80%;
+    flex: 1;
 }
 
 :host {
@@ -115,48 +115,6 @@
                 animation: none;
             }
         }   
-    }
-}
-
-.timeline {
-    .step {
-        position: relative;
-        padding: 20px 0;
-
-        &::before {
-            position: absolute;
-            content: '';
-            width: 10px;
-            height: 10px;
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 200% 200%;
-            background-position: 25% 75%;
-            border-radius: 50%;
-            top: 60px;
-            left: 20px;
-
-            transform: scale(1.3);
-        }
-
-        &:not(:last-child) {
-            &::after {
-                position: absolute;
-                content: '';
-                height: calc(100% - 30px);
-                top: 64px;
-                left: 24px;
-                z-index: -1;
-                margin: 15px 0;
-                border: 1px dashed #575757;
-            }
-        }
-
-        .time-card {
-            background: rgba(0, 0, 0, 1);
-            margin: 0 10px 0 50px;
-            border-radius: 10px;
-            padding: 20px;
-        }
     }
 }
 
@@ -262,4 +220,95 @@
 
 p {
     text-align: justify;
+}
+
+
+.timeline {
+    .step {
+        position: relative;
+        padding: 20px 0;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 200% 200%;
+            background-position: 25% 75%;
+            border-radius: 50%;
+            top: 60px;
+            left: 20px;
+
+            transform: scale(1.3);
+        }
+
+        &:not(:last-child) {
+            &::after {
+                position: absolute;
+                content: '';
+                height: calc(100% - 30px);
+                top: 64px;
+                left: 24px;
+                z-index: -1;
+                margin: 15px 0;
+                border: 1px dashed #575757;
+            }
+        }
+
+        .time-card {
+            background: rgba(0, 0, 0, 1);
+            margin: 0 10px 0 50px;
+            border-radius: 10px;
+            padding: 20px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .step {
+            .time-card {
+                margin: 0;
+
+                h4 {
+                    text-align: center;
+                }
+
+                .caption {
+                    flex-direction: column;
+                }
+
+                .products {
+                    .head {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                left: 50% !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .left-panel {
+        display: none;
+    }
+
+    .section {
+        margin: 20px 0;
+        padding: 0 20px;
+    }
+
+    .tags {
+        justify-content: space-evenly;
+    }
+
+
 }

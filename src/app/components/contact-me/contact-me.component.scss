@@ -166,3 +166,27 @@
         justify-content: center;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .contact-me-container {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #1E2D3D;
+    }
+
+    .content-container {
+        flex: 1;
+        .form-container {
+            flex: 1;
+            border-right: none;
+            border-bottom: 1px solid #1E2D3D;
+        }
+        .preview-container {
+            display: none;
+        }
+    }
+}
