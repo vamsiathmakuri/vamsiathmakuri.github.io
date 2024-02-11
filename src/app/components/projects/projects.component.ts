@@ -40,14 +40,6 @@ export class ProjectsComponent implements OnInit {
         image: 'https://opengraph.githubassets.com/5898d143aff627e10c79f6594d10c895a253eca06e2fe2e2d7c151914f63ab35/vamsiathmakuri/genshin-impact-terminal',
         underDevelopment: true,
     }, {
-        id: '_sqs-poll',
-        name: 'SQS Poll',
-        tags: ['Node JS', 'JavaScript'],
-        description: `Wrapper for AWS SQS Http Implementation, Using RxJS`,
-        image: 'https://opengraph.githubassets.com/674b2f91455557eb32080221dd5cdd0c23a69ae887994b690b38b0e4fea33834/vamsiathmakuri/sqs-poll',
-        code: 'https://github.com/vamsiathmakuri/sqs-poll',
-        underDevelopment: true,
-    }, {
         id: '_magneto',
         name: 'Mangeto UI',
         tags: ['Angular', 'TypeScript'],
